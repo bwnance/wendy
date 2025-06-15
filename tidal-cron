@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+0 */6 * * * sh /code/run.sh >> /var/log/cron.log 2>&1

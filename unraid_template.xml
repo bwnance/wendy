@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Container version="1">
+    <Name>Tidal Follower</Name>
+    <Repository>bwnance/tidalfollower</Repository>
+    <Registry>https://hub.docker.com/r/bwnance/tidalfollower/</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support></Support>
+    <Overview>Follows a tidal playlist and downloads tracks from it on a cron</Overview>
+    <Description></Description>
+    <Config Name="Track Location" Target="/tracks" Default="" Mode="rw" Description="Tracks will be here after conversion" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/tidalfollower" Mode="rw" Description="Persistent storage for tidal-dl-ng config info" Type="Path" Display="advanced" Required="false" Mask="false"/>
+</Container>
