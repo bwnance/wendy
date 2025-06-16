@@ -9,6 +9,10 @@ RUN chmod +x /usr/local/bin/convert-m4a-to-mp3
 
 RUN touch /var/log/cron.log
 
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
+
 RUN pip install --upgrade poetry
 WORKDIR /code
 RUN git clone https://github.com/bwnance/tidal-dl-ng.git
@@ -20,7 +24,6 @@ WORKDIR /
 
 RUN mkdir -p /data
 RUN mkdir -p /tracks
-RUN mkdir -p /sctracks
 
 COPY tidal-cron /etc/cronjob
 RUN crontab /etc/cronjob
